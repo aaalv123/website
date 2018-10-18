@@ -14,3 +14,4 @@ npm run serve
 ```
 npm run build
 ```
+vue 练手
