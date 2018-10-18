@@ -1,0 +1,718 @@
+html,
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #000;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.news {
+    padding-top: 90px;
+    height: 630px;
+}
+
+.news .title {
+    background: url(../img/tit4.png) no-repeat center top;
+    height: 106px;
+}
+
+.news .newstitle {
+    height: 42px;
+    border-bottom: 1px solid #60739d;
+    line-height: 42px;
+}
+
+.news .newstitle h2 {
+    display: inline;
+    color: #aaccff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.news .newstitle .more {
+    float: right;
+    font-size: 14px;
+    color: #657aa1;
+}
+
+.news .newstitle .tab {
+    float: right;
+}
+
+.news .newstitle .tab span {
+    display: inline-block;
+    width: 46px;
+    height: 40px;
+    font-size: 18px;
+    color: #657aa1;
+    margin-left: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.news .newstitle .tab span:first-child {
+    margin-left: 0;
+}
+
+.news .newstitle .tab .active {
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 3px solid #fff;
+}
+
+.news .newsarticle {
+    float: left;
+    width: 448px;
+}
+
+.news .newsarticle ul {
+    padding-top: 20px;
+}
+
+.news .newsarticle li {
+    height: 46px;
+    line-height: 46px;
+    color: #aaccff;
+    font-size: 16px;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.news .newsarticle li a {
+    float: left;
+    width: 340px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #aaccff;
+}
+
+.news .newsarticle li a:hover {
+    color: #f23636;
+}
+
+.news .newsarticle li span {
+    float: right;
+    font-size: 14px;
+}
+
+.news .newsarticle li:nth-of-type(2n+1) {
+    background-color: #122448;
+}
+
+.news .newsvideo {
+    float: right;
+    width: 712px;
+}
+
+.news .newsvideo .gleagueVideolist {
+    background-color: rgba(19, 43, 81, 0.7);
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.news .newsvideo .gleagueVideolist ul {
+    height: 100%;
+    margin-left: -4px;
+    display: none;
+}
+
+.news .newsvideo .gleagueVideolist ul:first-child {
+    display: block;
+}
+
+.news .newsvideo .gleagueVideolist li {
+    float: left;
+    width: 218px;
+    height: 212px;
+    margin: 18px 0 0 16px;
+    cursor: pointer;
+}
+
+.news .newsvideo .gleagueVideolist li a {
+    display: block;
+}
+
+.news .newsvideo .gleagueVideolist li .imgbox {
+    width: 218px;
+    height: 128px;
+    position: relative;
+    overflow: hidden;
+}
+
+.news .newsvideo .gleagueVideolist li .imgbox img {
+    width: 218px;
+    height: 128px;
+    display: block;
+}
+
+.news .newsvideo .gleagueVideolist li .imgbox .time {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 48px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background-color: #131410;
+    color: #fff;
+    font-size: 12px;
+}
+
+.news .newsvideo .gleagueVideolist li .imgbox .cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../img/play2.png) no-repeat center center rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -webkit-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+}
+
+.news .newsvideo .gleagueVideolist li .vtit {
+    padding: 8px 10px;
+}
+
+.news .newsvideo .gleagueVideolist li .vtit h3 {
+    height: 52px;
+    font-size: 14px;
+    color: #aaccff;
+    line-height: 24px;
+    overflow: hidden;
+}
+
+.news .newsvideo .gleagueVideolist li:hover .imgbox .cover {
+    opacity: 1;
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+}
+
+.news .newsvideo .gleagueVideolist li:hover dt,
+.news .newsvideo .gleagueVideolist li:hover h3 {
+    color: #f23636;
+}
+
+.videoplay {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: -252px 0 0 -402px;
+    width: 800px;
+    height: 500px;
+    border: 2px solid #ccc;
+    background-color: #000;
+}
+
+.videoplay video {
+    width: 100%;
+    height: 100%;
+}
+
+.videoplay span {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #ccc;
+}
+
+.formlist {
+    padding-top: 28px;
+}
+
+.formlist .inputlist {
+    float: left;
+    width: 574px;
+}
+
+.formlist .inputlist h3 {
+    font-size: 24px;
+    color: #c4d9f6;
+    font-weight: bold;
+    height: 30px;
+    padding: 16px 0 20px;
+}
+
+.formlist .inputlist h3 span {
+    font-size: 12px;
+    color: #f44a4a;
+    float: right;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.formlist .inputlist .inputbox {
+    font-size: 0;
+}
+
+.formlist .inputlist .inputbox .inputarea {
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #283154;
+    font-size: 0;
+    position: relative;
+}
+
+.formlist .inputlist .inputbox .inputarea span {
+    display: inline-block;
+    width: 126px;
+    height: 33px;
+    background: url(../img/inputitile.jpg) no-repeat;
+    text-align: center;
+    color: #c4d9f6;
+    font-size: 16px;
+    line-height: 33px;
+    margin: 1px;
+    vertical-align: top;
+}
+
+.formlist .inputlist .inputbox .inputarea input,
+.formlist .inputlist .inputbox .inputarea select {
+    width: 414px;
+    padding: 0 15px;
+    height: 35px;
+    line-height: 35px;
+    vertical-align: top;
+    border: 0 none;
+    background-color: #040615;
+    color: #7b82b2;
+    font-size: 16px;
+    box-sizing: content-box;
+}
+
+.formlist .inputlist .inputbox .inputarea .province,
+.formlist .inputlist .inputbox .inputarea .city {
+    width: 200px;
+}
+
+.formlist .inputlist .inputbox .inputarea select::-ms-expand {
+    display: none;
+}
+
+.formlist .inputlist .inputbox .inputarea select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(../img/select.png);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.formlist .inputlist .inputbox .inputarea select:focus {
+    outline: 0 none;
+}
+
+.formlist .inputlist .inputbox .inputarea input::-webkit-input-placeholder {
+    color: #7b82b2;
+}
+
+.formlist .inputlist .inputbox .inputarea input:-moz-placeholder {
+    color: #7b82b2;
+}
+
+.formlist .inputlist .inputbox .inputarea input::-moz-placeholder {
+    color: #7b82b2;
+}
+
+.formlist .inputlist .inputbox .inputarea input:-ms-input-placeholder {
+    color: #7b82b2;
+}
+
+.formlist .inputlist .inputbox .require:before {
+    content: '*';
+    color: #f44a4a;
+    font-size: 30px;
+    position: absolute;
+    left: -20px;
+    top: 5px;
+}
+
+.formlist .inputlist .inputbox .little1 {
+    width: 320px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.formlist .inputlist .inputbox .little1 select {
+    width: 160px;
+}
+
+.formlist .inputlist .inputbox .little2 {
+    width: 202px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.formlist .inputlist .inputbox .little2 select {
+    width: 170px;
+}
+
+.formlist .inputlist .inputbox .innerwz {
+    color: #c4d9f6;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: top;
+    height: 35px;
+    line-height: 35px;
+    width: 48px;
+    text-align: center;
+}
+
+.formlist .inputlist .inputbox .inputerr {
+    height: 22px;
+    line-height: 22px;
+    color: #b92a2a;
+    font-size: 12px;
+}
+
+.formlist .inputlist .inputbox .errborder {
+    border-color: #b92a2a;
+}
+
+.formlist .inputlist .textareabox textarea {
+    width: 550px;
+    height: 150px;
+    border: 1px solid #283154;
+    background-color: #040615;
+    resize: none;
+    font-size: 16px;
+    color: #7b82b2;
+    padding: 10px;
+}
+
+.formlist .inputlist .textareabox textarea:focus {
+    outline: 0 none;
+}
+
+.formlist .inputlist .textareabox textarea::-webkit-input-placeholder {
+    color: #7b82b2;
+}
+
+.formlist .inputlist .textareabox textarea:-moz-placeholder {
+    color: #7b82b2;
+}
+
+.formlist .inputlist .textareabox textarea::-moz-placeholder {
+    color: #7b82b2;
+}
+
+.formlist .inputlist .textareabox textarea:-ms-input-placeholder {
+    color: #7b82b2;
+}
+
+.formlist .inputlist .textareabox .inputerr {
+    height: 22px;
+    line-height: 22px;
+    color: #b92a2a;
+    font-size: 12px;
+}
+
+.formlist .inputlist .uploadVideo {
+    position: relative;
+    height: 88px;
+}
+
+.formlist .inputlist .uploadVideo:before {
+    content: '*';
+    color: #f44a4a;
+    font-size: 30px;
+    position: absolute;
+    left: -20px;
+    top: -50px;
+}
+
+.formlist .inputlist .uploadVideo .uploadbutton {
+    width: 116px;
+    height: 52px;
+    cursor: pointer;
+    border: 1px solid #c4d9f7;
+    background: url(../img/uploadbuttonbg.png) no-repeat 12px 5px;
+    padding-left: 86px;
+    font-size: 14px;
+    color: #c4d9f7;
+    line-height: 52px;
+    position: relative;
+}
+.formlist .inputlist .uploadVideo .uploadbutton input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.formlist .inputlist .uploadVideo .uploadbutton:before {
+    content: '';
+    height: 30px;
+    width: 1px;
+    background-color: #c4d9f7;
+    display: block;
+    position: absolute;
+    left: 70px;
+    top: 10px;
+}
+
+.formlist .inputlist .uploadVideo .errborder {
+    border-color: #b92a2a;
+}
+
+.formlist .inputlist .uploadVideo .uploaderpick {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.formlist .inputlist .uploadVideo .uploadProcess {
+    display: none;
+}
+
+.formlist .inputlist .uploadVideo .uploadProcess .upname {
+    height: 40px;
+}
+
+.formlist .inputlist .uploadVideo .uploadProcess .upname .name {
+    background: url(../img/upiconplay.png) no-repeat;
+    font-size: 14px;
+    color: #c4d9f7;
+    padding-left: 30px;
+    display: inline-block;
+    height: 20px;
+}
+
+.formlist .inputlist .uploadVideo .uploadProcess .upname .operateCannel,
+.formlist .inputlist .uploadVideo .uploadProcess .upname .operateReupload {
+    float: right;
+    font-size: 14px;
+    color: #c4d9f7;
+    text-decoration: underline;
+    margin-top: 2px;
+    cursor: pointer;
+    display: none;
+}
+
+.formlist .inputlist .uploadVideo .uploadProcess .process {
+    height: 10px;
+    border: 1px solid #283154;
+    border-radius: 3px;
+    background-color: #040615;
+}
+
+.formlist .inputlist .uploadVideo .uploadProcess .process .percent {
+    display: block;
+    height: 10px;
+    background-color: #b92a2a;
+    border-radius: 2px;
+    width: 0%;
+}
+
+.formlist .inputlist .uploadVideo .uploadProcess .upsize {
+    height: 20px;
+    font-size: 14px;
+    color: #696f97;
+    padding-top: 10px;
+}
+
+.formlist .inputlist .uploadVideo .uploadProcess .upsize .speed {
+    padding-left: 40px;
+}
+
+.formlist .inputlist .uploadVideo .uploadProcess .upsize .speed em {
+    font-style: normal;
+}
+
+.formlist .inputlist .uploadVideo .uploadStatus {
+    height: 20px;
+    font-size: 14px;
+    color: #696f97;
+    padding-top: 10px;
+}
+
+.formlist .inputlist .uploadVideo .uploadStatus span {
+    color: #f44a4a;
+}
+
+.formlist .inputlist .uploadVideo .wz {
+    padding-top: 10px;
+}
+
+.formlist .inputlist .uploadVideo .wz p {
+    color: #696f97;
+    font-size: 14px;
+}
+
+.formlist .photolist {
+    float: right;
+    width: 596px;
+    font-size: 0;
+}
+
+.formlist .photolist h3 {
+    font-size: 24px;
+    color: #c4d9f6;
+    font-weight: bold;
+    padding: 16px 0 0 20px;
+}
+
+.formlist .photolist .photobox {
+    display: inline-block;
+    width: 278px;
+    vertical-align: top;
+    margin: 20px 0 10px 20px;
+}
+
+.formlist .photolist .photobox img {
+    width: 276px;
+    height: 174px;
+    border: 1px solid #283154;
+}
+
+.formlist .photolist .photobox .upimgbutton {
+    border: 1px solid #c4d9f7;
+    height: 38px;
+    line-height: 35px;
+    text-align: center;
+    color: #c4d9f6;
+    display: block;
+    font-size: 16px;
+    margin-top: 6px;
+    position: relative;
+    cursor: pointer;
+}
+
+.formlist .photolist .photobox .require:before {
+    content: '*';
+    color: #f44a4a;
+    font-size: 30px;
+    position: absolute;
+    left: -18px;
+    top: 6px;
+}
+
+.formlist .photolist .photobox .errborder {
+    border-color: #b92a2a;
+}
+
+.formlist .photolist .photobox .photoerr {
+    color: #b92a2a;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+}
+
+.formlist .photolist .wzbox {
+    display: inline-block;
+    width: 276px;
+    vertical-align: top;
+    padding-top: 50px;
+    margin-left: 20px;
+}
+
+.formlist .photolist .wzbox li {
+    position: relative;
+    padding-left: 30px;
+    color: #696f97;
+    font-size: 12px;
+    line-height: 28px;
+}
+
+.formlist .photolist .wzbox li span {
+    position: absolute;
+    left: 0;
+}
+
+.formlist .formsubmit {
+    text-align: center;
+    clear: both;
+    padding-top: 40px;
+}
+
+.formlist .formsubmit .tix {
+    text-align: center;
+    color: #f44a4a;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+.formlist .formsubmit button {
+    width: 220px;
+    height: 56px;
+    background-color: #b92a2a;
+    border-radius: 15px;
+    border: 0 none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.formlist .formsubmit button:hover {
+    background-color: #e14040;
+}
+
+.formlist .formsubmit .wz {
+    font-size: 16px;
+    color: #747cb2;
+    padding: 20px 0 0;
+}
+
+.formlist .formsubmit .wz a {
+    color: #b92a2a;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.formlist .formsubmit .wz .choose {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin: -3px 6px 0 0;
+    background: url(../img/choose.png) no-repeat center;
+    cursor: pointer;
+}
+
+.formlist .formsubmit .wz .nochoose {
+    background-image: url(../img/no_choose.png);
+}
+
+.formlist .formsubmit .agreement {
+    color: #b92a2a;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+}
